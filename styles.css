@@ -1,0 +1,977 @@
+/* Modern Neumorphism Design - Digital Marketing Portfolio */
+
+:root {
+    --bg-primary: #e6e7ee;
+    --bg-secondary: #f0f1f8;
+    --text-primary: #4a5568;
+    --text-secondary: #718096;
+    --text-accent: #2d3748;
+    --accent-blue: #4299e1;
+    --accent-purple: #805ad5;
+    --shadow-light: #ffffff;
+    --shadow-dark: #d1d9e6;
+    --border-radius: 20px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    overflow-x: hidden;
+}
+
+/* Navigation Styles - Neumorphism */
+.navbar {
+    background: var(--bg-primary);
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    transition: var(--transition);
+    padding: 1rem 0;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.navbar.scrolled {
+    box-shadow: 
+        inset 2px 2px 5px var(--shadow-dark),
+        inset -2px -2px 5px var(--shadow-light);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-accent);
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 8px 16px !important;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent-blue) !important;
+    background: var(--bg-primary);
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    transform: translateY(-1px);
+}
+
+.btn-hire-me {
+    background: var(--bg-primary);
+    border: none;
+    border-radius: 15px;
+    color: var(--accent-purple) !important;
+    font-weight: 600;
+    padding: 8px 20px !important;
+    box-shadow: 
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+    transition: var(--transition);
+    position: relative;
+}
+
+.btn-hire-me:hover {
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    color: var(--accent-blue) !important;
+}
+
+/* Hero Section - Neumorphism */
+.hero-section {
+    background: var(--bg-primary);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 50px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(66, 153, 225, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(128, 90, 213, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--text-primary);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.hero-buttons .btn {
+    padding: 15px 35px;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 10px 10px 0;
+}
+
+.btn-primary {
+    background: var(--bg-primary);
+    border: none;
+    color: var(--accent-blue);
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+}
+
+.btn-primary:hover {
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    color: var(--accent-purple);
+    background: var(--bg-primary);
+}
+
+.btn-outline-light {
+    background: var(--bg-primary);
+    border: 2px solid var(--accent-purple);
+    color: var(--accent-purple);
+    box-shadow: 
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+}
+
+.btn-outline-light:hover {
+    background: var(--bg-primary);
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+}
+
+/* Hero Image Grid - Neumorphism */
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background: var(--bg-primary);
+    box-shadow: 
+        12px 12px 24px var(--shadow-dark),
+        -12px -12px 24px var(--shadow-light);
+    transition: var(--transition);
+    padding: 8px;
+}
+
+.image-item:hover {
+    box-shadow: 
+        inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light);
+    transform: scale(0.98);
+}
+
+.image-item:nth-child(1) {
+    grid-column: 1 / 3;
+    height: 200px;
+}
+
+.image-item:nth-child(2) {
+    height: 150px;
+}
+
+.image-item:nth-child(3) {
+    height: 150px;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius) - 8px);
+}
+
+/* Section Styles - Neumorphism */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+/* About Section - Neumorphism */
+.about-section {
+    background: var(--bg-secondary);
+    padding: 80px 0;
+}
+
+.about-image {
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: 
+        15px 15px 30px var(--shadow-dark),
+        -15px -15px 30px var(--shadow-light);
+}
+
+.about-image img {
+    border-radius: calc(var(--border-radius) - 15px);
+    width: 100%;
+    height: auto;
+}
+
+.about-content {
+    padding: 2rem 0;
+}
+
+.skills {
+    margin-top: 2rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--text-accent);
+}
+
+.progress {
+    height: 12px;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+}
+
+.progress-bar {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    height: 100%;
+    border-radius: 15px;
+    transition: width 1s ease-in-out;
+    box-shadow: 
+        2px 2px 4px var(--shadow-dark),
+        -2px -2px 4px var(--shadow-light);
+}
+
+/* Services Section - Neumorphism */
+.services-section {
+    background: var(--bg-primary);
+    padding: 80px 0;
+}
+
+.service-card {
+    background: var(--bg-primary);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 
+        10px 10px 20px var(--shadow-dark),
+        -10px -10px 20px var(--shadow-light);
+    transition: var(--transition);
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.service-card:hover {
+    box-shadow: 
+        inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light);
+    transform: scale(0.98);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--accent-blue);
+    font-size: 1.5rem;
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+}
+
+.service-card h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-accent);
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Portfolio Section - Neumorphism */
+.portfolio-section {
+    background: var(--bg-secondary);
+    padding: 80px 0;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background: var(--bg-secondary);
+    padding: 15px;
+    box-shadow: 
+        12px 12px 24px var(--shadow-dark),
+        -12px -12px 24px var(--shadow-light);
+    transition: var(--transition);
+    margin-bottom: 2rem;
+}
+
+.portfolio-item:hover {
+    box-shadow: 
+        inset 8px 8px 16px var(--shadow-dark),
+        inset -8px -8px 16px var(--shadow-light);
+    transform: scale(0.98);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius) - 15px);
+    transition: var(--transition);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: rgba(66, 153, 225, 0.9);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    border-radius: calc(var(--border-radius) - 15px);
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials Section - Neumorphism */
+.testimonials-section {
+    background: var(--bg-primary);
+    padding: 80px 0;
+}
+
+.testimonial-card {
+    background: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 
+        10px 10px 20px var(--shadow-dark),
+        -10px -10px 20px var(--shadow-light);
+    transition: var(--transition);
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.testimonial-card:hover {
+    box-shadow: 
+        inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light);
+    transform: scale(0.98);
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+    box-shadow: 
+        4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light);
+}
+
+.author-info h6 {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: var(--text-accent);
+}
+
+.author-info span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Blog Section - Neumorphism */
+.blog-section {
+    background: var(--bg-secondary);
+    padding: 80px 0;
+}
+
+.blog-card {
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 
+        12px 12px 24px var(--shadow-dark),
+        -12px -12px 24px var(--shadow-light);
+    transition: var(--transition);
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.blog-card:hover {
+    box-shadow: 
+        inset 8px 8px 16px var(--shadow-dark),
+        inset -8px -8px 16px var(--shadow-light);
+    transform: scale(0.98);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius) - 15px);
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-date {
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.blog-content h5 {
+    font-weight: 600;
+    margin: 0.5rem 0 1rem;
+    color: var(--text-accent);
+}
+
+.blog-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.read-more:hover {
+    color: var(--accent-purple);
+    text-decoration: none;
+}
+
+/* Contact Section - Neumorphism */
+.contact-section {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 80px 0;
+}
+
+.contact-section .section-title {
+    color: var(--text-accent);
+}
+
+.contact-section .section-subtitle {
+    color: var(--text-secondary);
+}
+
+.contact-form {
+    background: var(--bg-primary);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 
+        inset 8px 8px 16px var(--shadow-dark),
+        inset -8px -8px 16px var(--shadow-light);
+}
+
+.contact-form .form-control {
+    background: var(--bg-primary);
+    border: none;
+    color: var(--text-primary);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 1rem;
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    transition: var(--transition);
+}
+
+.contact-form .form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+.contact-form .form-control:focus {
+    outline: none;
+    box-shadow: 
+        inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light),
+        0 0 0 2px var(--accent-blue);
+}
+
+.contact-info {
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.contact-info i {
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    background: var(--bg-primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+}
+
+.contact-info h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-accent);
+}
+
+.contact-info p {
+    color: var(--text-secondary);
+}
+
+/* Footer - Neumorphism */
+.footer {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 40px 0;
+}
+
+.footer p {
+    color: var(--text-secondary);
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+}
+
+.social-link:hover {
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    color: var(--accent-purple);
+    transform: scale(0.95);
+}
+
+.linkedin-link {
+    position: relative;
+}
+
+.linkedin-link:hover {
+    color: #0077b5 !important; /* LinkedIn brand color */
+    transform: scale(1.1);
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light),
+        0 0 20px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-link:hover::after {
+    content: "Connect on LinkedIn";
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-secondary);
+    color: var(--text-accent);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    box-shadow: 
+        4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light);
+    z-index: 1000;
+    animation: tooltipFadeIn 0.3s ease-out;
+}
+
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .image-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+    
+    .image-item:nth-child(1) {
+        grid-column: 1;
+        height: 200px;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .hero-buttons {
+        text-align: center;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .service-card,
+    .testimonial-card,
+    .blog-card {
+        margin-bottom: 2rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+    opacity: 0;
+}
+
+/* Hire Me Popup Styles - Neumorphism */
+.hire-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+.hire-popup.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.hire-popup-content {
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 
+        20px 20px 40px var(--shadow-dark),
+        -20px -20px 40px var(--shadow-light);
+    animation: slideIn 0.3s ease-out;
+}
+
+.hire-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hire-popup-header h4 {
+    margin: 0;
+    color: var(--text-accent);
+    font-weight: 600;
+}
+
+.close-popup {
+    background: var(--bg-primary);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 
+        4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light);
+}
+
+.close-popup:hover {
+    box-shadow: 
+        inset 3px 3px 6px var(--shadow-dark),
+        inset -3px -3px 6px var(--shadow-light);
+    color: var(--accent-purple);
+}
+
+.hire-form {
+    padding: 2rem;
+}
+
+.hire-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.hire-form .form-control {
+    background: var(--bg-primary);
+    border: none;
+    color: var(--text-primary);
+    border-radius: 12px;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    transition: var(--transition);
+    font-family: 'Poppins', sans-serif;
+}
+
+.hire-form .form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+.hire-form .form-control:focus {
+    outline: none;
+    box-shadow: 
+        inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light),
+        0 0 0 2px var(--accent-blue);
+}
+
+.hire-form select.form-control {
+    cursor: pointer;
+}
+
+.hire-form textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.hire-form .btn-block {
+    width: 100%;
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
